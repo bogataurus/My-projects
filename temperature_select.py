@@ -1,3 +1,8 @@
+#radiators = ["Kitchen","living room","dining room","bathroom","bedroom","ebeveyn bedroom"]
+
+
+radiators = input("Radiator: ")
+
 temperature = input("Please enter a temperature  between 15  to 60: ")
 
 temperature_list = temperature.split()
@@ -15,4 +20,4 @@ for value in temperature_list:
         heating_radiator = value
     else:
         pass
-    print(heating_radiator)
+    print(radiators, "radiator temperature: ", heating_radiator)
