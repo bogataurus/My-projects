@@ -12,7 +12,7 @@ for value in temperature_list:
     elif int(value) + 15 <= 60:
         heating_radiator = value
     elif int(value) + 15 >= 60:
-        heating_radiator = int(value) +15 -15
+        heating_radiator = value
     else:
         pass
     print(heating_radiator)
