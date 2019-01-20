@@ -1,7 +1,7 @@
 #radiators = ["Kitchen","living room","dining room","bathroom","bedroom","ebeveyn bedroom"]
 
 
-radiators = input("Radiator: ")
+radiators = input("Radiator select: Kitchen, living room , dining room , bathroom , bedroom , ebeveyn bedroom: ")
 
 temperature = input("Please enter a temperature  between 15  to 60: ")
 
