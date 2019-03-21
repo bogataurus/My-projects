@@ -1,26 +1,27 @@
-#radiators = ["Kitchen","living room","dining room","bathroom","bedroom","ebeveyn bedroom"]
+radiators_list = ["kitchen","livingRoom","diningRoom","bathroom","bedroom1","bedroom2", "bedroom3"]
+temperatur_list = [15, 18, 22,  26, 30, 35, 40, 45]
 
+heating_radiator = ""
+temperature = "" 
 
-radiators = input("Radiator select: Kitchen, living room , dining room , bathroom , bedroom , ebeveyn bedroom: ")
-
-temperature = input("Please enter a temperature  between 15  to 60: ")
-
-temperature_list = temperature.split()
-
-heating_radiator = 0
-
-for value in temperature_list:
-    if int(value) > 60:
-        heating_radiator = 60
-    elif int(value) < 15:
-        heating_radiator = 15        
-    elif int(value) + 15 <= 60:
-        heating_radiator = value
-    elif int(value) + 15 >= 60:
-        heating_radiator = value
+while True:
+    radiator_select = input ( "Select radiator at list: kitchen, livingRoom , diningRoom , bathroom , bedroom1 , bedroom2, bedroom3: or quit: " )
+    if radiator_select in radiators_list:
+        heating_radiator = radiator_select        
+        
+        while True:            
+            temperature_select = int(input("Please enter a temperature at list: 15, 18, 22,  26, 30, 35, 40, 45: "))
+            if temperature_select in temperatur_list:
+                temperature = temperature_select
+                print("Radiator Type: ",heating_radiator , ";", "Temperature: ", temperature)
+                break            
+            else:
+                print("Invalid input! Please enter a temperature at list")   
+            
+    elif radiator_select.startswith ( "q" ):
+        print("exit!")
+        break    
     else:
-        pass
-    print(radiators, "radiator temperature: ", heating_radiator)
-    print("my name is bogataurus")
+        print("Invalid input! Please select radiator at list")
     
           
